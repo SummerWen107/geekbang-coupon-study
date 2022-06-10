@@ -20,6 +20,7 @@
 	<packaging>pom</packaging>
 	<modules>
 		<module>coupon-template-api</module>
+		<module>coupon-template-dao</module>
 	</modules>
 
 	<properties>
