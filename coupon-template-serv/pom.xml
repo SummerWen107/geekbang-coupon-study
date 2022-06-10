@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<parent>
+		<artifactId>coupon-study</artifactId>
+		<groupId>com.summerwen</groupId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+
+	<!--
+		coupon-template-serv 是大 boss 下面的一个小头目，和 geekbang-coupon 一样，它的 packaging 类型也是 pom。
+		我们说过 boss 只用管顶层战略，因此 coupon-temolate-serv 的 pom 文件内容很简单，
+		只是定义了父级项目和子模块
+	-->
+	<artifactId>coupon-template-serv</artifactId>
+
+
+	<packaging>pom</packaging>
+	<modules>
+		<module>coupon-template-api</module>
+	</modules>
+
+	<properties>
+		<maven.compiler.source>8</maven.compiler.source>
+		<maven.compiler.target>8</maven.compiler.target>
+	</properties>
+
+</project>

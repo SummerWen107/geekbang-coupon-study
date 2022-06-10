@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<parent>
+		<artifactId>coupon-template-serv</artifactId>
+		<groupId>com.summerwen</groupId>
+		<version>1.0-SNAPSHOT</version>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+
+
+	<!--
+		coupon-template-api 模块是专门用来存放公共类的仓库，
+		我把 REST API 接口的服务请求和服务返回对象的 POJO 类放到了里面。
+		在微服务领域，将外部依赖的 POJO 类或者API 接口层单独打包是一种通用做法，
+		这样就可以给外部依赖方提供一个"干净"（不包含非必要依赖）的接口包，为远程服务调用（RPC）提供支持。
+	-->
+	<artifactId>coupon-template-api</artifactId>
+
+	<properties>
+		<maven.compiler.source>8</maven.compiler.source>
+		<maven.compiler.target>8</maven.compiler.target>
+	</properties>
+
+	<!--
+		在 coupon-template-api 项目的 pom 文件中，我只添加了少量的"工具类"依赖，
+		比如lombok、guava 和 validation-api 包等通用组件，
+		这些工具类用来帮助我们自动生成代码并提供一些便捷的功能特性
+	-->
+	<dependencies>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-collections4</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+		</dependency>
+
+
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>jakarta.validation</groupId>
+			<artifactId>jakarta.validation-api</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+		</dependency>
+	</dependencies>
+
+</project>
