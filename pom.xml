@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<!--	该pom文件的作用说明
+		geekbang-coupon 是整个实战项目的顶层项目
+		它不用操心具体的业务逻辑，只用完成一个任务：管理子模块和定义 Maven 依赖项的版本。
+		这就像一个公司的大 boss 一样，只用制定方向战略，琐碎的业务就交给下面人（子模块）来办就好了
+	-->
+
+	<!--	parent的作用
+		在 parent 标签中我们指定了 geekbang-coupon 项目的"父级依赖"为 spring-boot-starter-parent，
+		这样一来，spring-boot-starter-parent 里定义的 Spring Boot 组件版本信息就会被自动带到子模块中。
+		这种做法也是大多数 Spring Boot 项目的通用做法，
+		不仅降低了依赖项管理的成本，也不需要担心各个组件间的兼容性问题。
+	-->
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<!--<version>2.6.6</version>-->
+		<version>2.4.2</version>
+	</parent>
+
+	<!--	packaging的作用
+		maven 的打包类型有三种：jar、war 和 pom。
+		当我们指定 packaging 类型为 pom 时，意味着当前模块是一个"boss"，
+		它只用关注顶层战略，即定义依赖项版本和整合子模块，不包含具体的业务实现。
+	-->
+	<packaging>pom</packaging>
+
+	<groupId>com.summerwen</groupId>
+	<artifactId>coupon-study</artifactId>
+	<version>1.0-SNAPSHOT</version>
+
+	<properties>
+		<maven.compiler.source>8</maven.compiler.source>
+		<maven.compiler.target>8</maven.compiler.target>
+	</properties>
+
+	<!--	dependencyManagement 的作用
+		这个标签的作用和 < parent > 标签类似，两者都是将版本信息向下传递。
+		dependencymanagement 是 boss 们定义顶层战略的地方，我们可以在这里定义各个依赖项的版本，
+		当子项目需要引入这些依赖项的时候，只用指定 groupId 和 artifactId 即可，不用管 version 里该写哪个版本
+	-->
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>2020.0.1</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+
+
+			<dependency>
+				<groupId>com.alibaba.cloud</groupId>
+				<artifactId>spring-cloud-alibaba-dependencies</artifactId>
+				<version>2021.1</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-lang3</artifactId>
+				<version>3.0</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-collections4</artifactId>
+				<version>4.0</version>
+			</dependency>
+
+			<dependency>
+				<groupId>commons-codec</groupId>
+				<artifactId>commons-codec</artifactId>
+				<version>1.9</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>fastjson</artifactId>
+				<version>1.2.31</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<version>1.18.20</version>
+			</dependency>
+
+			<dependency>
+				<groupId>jakarta.validation</groupId>
+				<artifactId>jakarta.validation-api</artifactId>
+				<version>2.0.2</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.google.guava</groupId>
+				<artifactId>guava</artifactId>
+				<version>16.0</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+</project>
