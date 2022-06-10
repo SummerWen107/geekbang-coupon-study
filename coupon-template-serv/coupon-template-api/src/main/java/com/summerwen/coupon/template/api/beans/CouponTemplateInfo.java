@@ -1,4 +1,4 @@
-﻿package com.summerwen.coupon.template.api.beans;
+package com.summerwen.coupon.template.api.beans;
 
 
 import com.summerwen.coupon.template.api.beans.rules.TemplateRule;

@@ -1,4 +1,4 @@
-﻿package com.summerwen.coupon.template.api.enums;
+package com.summerwen.coupon.template.api.enums;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

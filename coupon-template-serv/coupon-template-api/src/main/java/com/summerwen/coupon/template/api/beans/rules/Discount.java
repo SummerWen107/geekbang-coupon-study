@@ -1,4 +1,4 @@
-﻿package com.summerwen.coupon.template.api.beans.rules;
+package com.summerwen.coupon.template.api.beans.rules;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

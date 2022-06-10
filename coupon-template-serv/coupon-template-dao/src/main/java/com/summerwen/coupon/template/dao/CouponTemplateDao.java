@@ -1,4 +1,4 @@
-﻿package com.summerwen.coupon.template.dao;
+package com.summerwen.coupon.template.dao;
 
 import com.summerwen.coupon.template.dao.entity.CouponTemplate;
 import org.springframework.data.domain.Page;

@@ -1,4 +1,4 @@
-﻿package com.summerwen.coupon.template.dao.entity;
+package com.summerwen.coupon.template.dao.entity;
 
 import com.summerwen.coupon.template.api.beans.rules.TemplateRule;
 import com.summerwen.coupon.template.api.enums.CouponType;

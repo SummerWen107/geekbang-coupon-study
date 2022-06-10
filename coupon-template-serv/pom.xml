@@ -21,6 +21,7 @@
 	<modules>
 		<module>coupon-template-api</module>
 		<module>coupon-template-dao</module>
+		<module>coupon-template-impl</module>
 	</modules>
 
 	<properties>
