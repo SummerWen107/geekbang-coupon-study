@@ -113,6 +113,7 @@ public class CouponTemplateServiceImpl implements CouponTemplateService {
     }
 
     public List<CouponTemplateInfo> searchTemplate(CouponTemplateInfo request) {
+        //封装查询条件
         CouponTemplate example = CouponTemplate.builder()
                 .shopId(request.getShopId())
                 .category(CouponType.convert(request.getType()))
@@ -122,7 +123,9 @@ public class CouponTemplateServiceImpl implements CouponTemplateService {
         // 可以用下面的方式做分页查询
 //        Pageable page = PageRequest.of(0, 100);
 //        templateDao.findAll(Example.of(example), page);
+        //使用jpa的条件查询
         List<CouponTemplate> result = templateDao.findAll(Example.of(example));
+        //将数据库数据转为返回对象
         return result.stream()
                 .map(CouponTemplateConverter::convertToTemplateInfo)
                 .collect(Collectors.toList());

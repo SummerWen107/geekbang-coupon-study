@@ -10,7 +10,7 @@ import javax.validation.constraints.NotNull;
 //import javax.validation.constraints.NotNull;
 
 /**
- * 创建优惠券模板
+ * 优惠券查询的入参
  */
 @Data
 @NoArgsConstructor
@@ -28,8 +28,9 @@ public class TemplateSearchParams {
 
     private Boolean available;
 
-    private int page;
-
-    private int pageSize;
+    //应该给个默认值，否则不传的话会报错
+    private int page = 0;
+    //应该给个默认值，否则不传的话会报错
+    private int pageSize = 10;
 
 }
