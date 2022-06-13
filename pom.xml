@@ -6,6 +6,7 @@
 	<modules>
 		<module>coupon-template-serv</module>
 		<module>coupon-calculation-serv</module>
+		<module>coupon-customer-serv</module>
 	</modules>
 
 	<!--	该pom文件的作用说明
